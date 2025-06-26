@@ -1,5 +1,5 @@
 # Ignore the entire Assets folder
-Assets/
+Assets/Art/
 
 # Unity build and temp files
 [Ll]ibrary/
