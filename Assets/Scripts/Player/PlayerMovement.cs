@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
         inputActions.Player.Move.canceled += OnMove;
 
         inputActions.Player.Interact.performed += OnInteract;
-        inputActions.Player.Interact.canceled+= OnInteract;
+        //inputActions.Player.Interact.canceled+= OnInteract;
 
     }
 
@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
         inputActions.Player.Move.canceled -= OnMove;
 
         inputActions.Player.Interact.performed -= OnInteract;
-        inputActions.Player.Interact.canceled -= OnInteract;
+        //inputActions.Player.Interact.canceled -= OnInteract;
 
         inputActions.Disable();
     }
@@ -60,14 +60,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnInteract(InputAction.CallbackContext context)
     {
         Vector3Int playerTilePos = cropManager.groundTilemap.WorldToCell(transform.position);
-        if (cropManager.TillSoil(playerTilePos))
-        {
-            Debug.Log("Soil tilled at " + playerTilePos);
-        }
-        else
-        {
-            Debug.Log("Can't till this tile!");
-        }
+        cropManager.tillOrWaterSoil(playerTilePos);
 
     }
 }
