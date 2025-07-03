@@ -1,5 +1,6 @@
 # Ignore the entire Assets folder
 Assets/Art/
+Assets/_Udemy Farming Assets - James Doyle/
 
 # Unity build and temp files
 [Ll]ibrary/
