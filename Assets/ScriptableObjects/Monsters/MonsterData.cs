@@ -11,7 +11,7 @@ public class MonsterData : ScriptableObject
     [Tooltip("Radius size where the monster can see the player")]
     [Range(0, 100)]
     public float _rangeOfAwareness;
-    public Sprite icon;
+    public Sprite _icon;
 
 
     [Header("Combat Stats")]

@@ -376,13 +376,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40d8ddefd882cf045a4f9c430894a81b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 
-  _changeToDropItems: 25.9
-  _rangeOfAwareness: 13
-  _damage: 0
-  _health: 0
-  _speed: 0
-  _battleCry: Kill the witch!
 --- !u!1 &290562264
 GameObject:
   m_ObjectHideFlags: 0
@@ -1043,7 +1036,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &443640768
 Transform:
   m_ObjectHideFlags: 0
@@ -5620,51 +5613,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &1493606570
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1493606572}
-  - component: {fileID: 1493606571}
-  m_Layer: 0
-  m_Name: Spawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1493606571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1493606570}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f1dda2f4bb1f4d42810c90811d0181f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabToSpawn: {fileID: 3089082166370994965, guid: 1c81ec54fa0da5e4a85f247c8d9ac836, type: 3}
---- !u!4 &1493606572
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1493606570}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1510616236
 GameObject:
   m_ObjectHideFlags: 0
@@ -23572,6 +23520,5 @@ SceneRoots:
   - {fileID: 290562266}
   - {fileID: 1013271765}
   - {fileID: 1168457720}
-  - {fileID: 1493606572}
   - {fileID: 1722862647}
   - {fileID: 216421926}

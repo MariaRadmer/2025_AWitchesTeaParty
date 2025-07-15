@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor.UIElements;
 
 public class MonsterEditor : EditorWindow
 {
@@ -15,11 +16,8 @@ public class MonsterEditor : EditorWindow
     private TextField nameField;
     private FloatField healthField;
     private FloatField damageField;
-
-
-
-    [SerializeField]
-    private VisualTreeAsset m_VisualTreeAsset = default;
+    private ObjectField iconField;
+    private Image iconPreview;
 
     [MenuItem("Window/UI Toolkit/MonsterEditor")]
     public static void ShowExample()
@@ -46,6 +44,11 @@ public class MonsterEditor : EditorWindow
         nameField = root.Q<TextField>("name-field");
         healthField = root.Q<FloatField>("health-field");
         damageField = root.Q<FloatField>("damage-field");
+        iconField = root.Q<ObjectField>("icon-field");
+        iconPreview = root.Q<Image>("icon-preview");
+
+        iconField.objectType = typeof(Sprite);
+        
 
         SetEditorEnabled(false);
 
@@ -66,7 +69,7 @@ public class MonsterEditor : EditorWindow
         nameField.RegisterValueChangedCallback(evt => { if (selectedMonster != null) { selectedMonster._name = evt.newValue; MarkDirty(); RefreshMonsterList();}});
         healthField.RegisterValueChangedCallback(evt => { if (selectedMonster != null) { selectedMonster._health = evt.newValue; MarkDirty(); } });
         damageField.RegisterValueChangedCallback(evt => { if (selectedMonster != null) { selectedMonster._damage = evt.newValue; MarkDirty(); } });
-
+        iconField.RegisterValueChangedCallback(evt => { if (selectedMonster != null) { selectedMonster._icon = (Sprite)evt.newValue; MarkDirty(); } });
     }
 
 
@@ -75,6 +78,8 @@ public class MonsterEditor : EditorWindow
         nameField.SetEnabled(enabled);
         healthField.SetEnabled(enabled);
         damageField.SetEnabled(enabled);
+        iconField.SetEnabled(enabled);
+        iconPreview.SetEnabled(enabled);
     }
 
     private void LoadMonsters()
@@ -104,14 +109,19 @@ public class MonsterEditor : EditorWindow
             nameField.UnregisterValueChangedCallback(OnNameChanged);
             healthField.UnregisterValueChangedCallback(OnHealthChanged);
             damageField.UnregisterValueChangedCallback(OnDamageChanged);
+            iconField.UnregisterValueChangedCallback(OnIconChanged);
 
             nameField.SetValueWithoutNotify(selectedMonster._name);
             healthField.SetValueWithoutNotify(selectedMonster._health);
             damageField.SetValueWithoutNotify(selectedMonster._damage);
+            iconField.SetValueWithoutNotify(selectedMonster._icon);
+            UpdateSpritePreview();
 
             nameField.RegisterValueChangedCallback(OnNameChanged);
             healthField.RegisterValueChangedCallback(OnHealthChanged);
             damageField.RegisterValueChangedCallback(OnDamageChanged);
+            iconField.RegisterValueChangedCallback(OnIconChanged);
+
         } else
         {
             selectedMonster = null;
@@ -154,4 +164,22 @@ public class MonsterEditor : EditorWindow
         MarkDirty();
     }
 
+    private void OnIconChanged(ChangeEvent<Object> evt)
+    {
+        selectedMonster._icon = (Sprite)evt.newValue;
+        MarkDirty();
+        UpdateSpritePreview();
+    }
+
+    private void UpdateSpritePreview()
+    {
+        if (selectedMonster != null && selectedMonster._icon != null)
+        {
+            iconPreview.style.backgroundImage = new StyleBackground(selectedMonster._icon);
+        }
+        else
+        {
+            iconPreview.style.backgroundImage = null;
+        }
+    }
 }
