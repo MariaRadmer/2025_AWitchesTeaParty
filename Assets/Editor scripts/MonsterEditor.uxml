@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ui="UnityEngine.UIElements"
+    xmlns:uie="UnityEditor.UIElements"
+    xsi:noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd"
+>
+    <Style src="project://database/Assets/Editor%20scripts/MonsterEditor.uss?fileID=7433441132597879392&amp;guid=cabb866598955bf4293b60da0146cb0b&amp;type=3#MonsterEditor" />
+
+    <ui:VisualElement class="main-container">
+
+        <ui:VisualElement class="monster-list-container">
+            <ui:Label text="Monster Editor" class="header"/>
+            <ui:ListView name="monster-list" class="list-view"/>
+            <ui:Button name="refresh-button" text="Refresh List" class="button"/>
+        </ui:VisualElement>
+
+
+        <ui:VisualElement name="editor-panel" class="editor-panel">
+            <ui:TextField name="name-field" label="Name"/>
+            <ui:FloatField name="health-field" label="Health"/>
+            <ui:FloatField name="damage-field" label="Damage"/>
+        </ui:VisualElement>
+
+    </ui:VisualElement>
+
+
+</ui:UXML>
