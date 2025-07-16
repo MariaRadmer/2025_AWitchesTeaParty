@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: affa5c5399564954cb28462c91960549, type: 3}
   m_Name: Flower
   m_EditorClassIdentifier: 
-  _name: Bessie
+  _name: bob
   _monsterType: 3
   _changeToDropItems: 23
   _rangeOfAwareness: 20
-  _icon: {fileID: -3800458654278106549, guid: b6442a289c143044196d4aeda5e7ba25, type: 3}
-  _damage: 18
-  _health: 18
+  _icon: {fileID: 2688582254844517938, guid: b6442a289c143044196d4aeda5e7ba25, type: 3}
+  _damage: 1
+  _health: 11
   _speed: 20
   _battleCry: '*Wiggle*'

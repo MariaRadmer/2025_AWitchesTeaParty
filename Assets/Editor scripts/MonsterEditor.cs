@@ -48,7 +48,7 @@ public class MonsterEditor : EditorWindow
         iconPreview = root.Q<Image>("icon-preview");
 
         iconField.objectType = typeof(Sprite);
-        
+        iconPreview.scaleMode = ScaleMode.ScaleToFit;
 
         SetEditorEnabled(false);
 
@@ -173,13 +173,40 @@ public class MonsterEditor : EditorWindow
 
     private void UpdateSpritePreview()
     {
-        if (selectedMonster != null && selectedMonster._icon != null)
+        if (selectedMonster._icon != null && selectedMonster._icon.texture != null)
         {
-            iconPreview.style.backgroundImage = new StyleBackground(selectedMonster._icon);
+            Texture2D cropped = GetCroppedTextureFromSprite(selectedMonster._icon);
+            iconPreview.style.backgroundImage = new StyleBackground(cropped); // selectedMonster._icon.texture);
         }
         else
         {
             iconPreview.style.backgroundImage = null;
         }
     }
+
+    private Texture2D GetCroppedTextureFromSprite(Sprite sprite)
+    {
+        if (sprite == null) return null;
+
+        Rect spriteRect = sprite.rect;
+        Texture2D sourceTexture = sprite.texture;
+
+        // Create a new texture with the size of the sprite
+        Texture2D croppedTexture = new Texture2D((int)spriteRect.width, (int)spriteRect.height);
+        croppedTexture.filterMode = sourceTexture.filterMode;
+        croppedTexture.wrapMode = TextureWrapMode.Clamp;
+
+        Color[] pixels = sourceTexture.GetPixels(
+            (int)spriteRect.x,
+            (int)spriteRect.y,
+            (int)spriteRect.width,
+            (int)spriteRect.height
+        );
+
+        croppedTexture.SetPixels(pixels);
+        croppedTexture.Apply();
+
+        return croppedTexture;
+    }
+
 }

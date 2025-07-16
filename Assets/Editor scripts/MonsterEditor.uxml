@@ -8,12 +8,11 @@
         </ui:VisualElement>
         <ui:VisualElement class="editor-panel" style="flex-basis: 0; min-width: 40%;">
             <ui:ScrollView name="editor-panel">
-                <ui:Image name="icon-preview"/>
+                <ui:Image name="icon-preview" class="icon-preview" />
                 <uie:ObjectField name="icon-field" label="Icon" />
-                <ui:TextField name="name-field" label="Name"/>
-                <ui:FloatField name="health-field" label="Health"/>
-                <ui:FloatField name="damage-field" label="Damage"/>
-                
+                <ui:TextField name="name-field" label="Name" />
+                <ui:FloatField name="health-field" label="Health" />
+                <ui:FloatField name="damage-field" label="Damage" />
             </ui:ScrollView>
         </ui:VisualElement>
     </ui:VisualElement>

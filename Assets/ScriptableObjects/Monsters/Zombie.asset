@@ -16,7 +16,7 @@ MonoBehaviour:
   _monsterType: 1
   _changeToDropItems: 23.2
   _rangeOfAwareness: 10
-  _icon: {fileID: -1291884296, guid: ed52bd4f612cf114384d330c94b78f81, type: 3}
+  _icon: {fileID: -4938982115208973816, guid: b6442a289c143044196d4aeda5e7ba25, type: 3}
   _damage: 1
   _health: 12
   _speed: 2

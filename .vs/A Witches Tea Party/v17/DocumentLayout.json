@@ -7,16 +7,12 @@
       "RelativeMoniker": "D:0:0:{27A65D5C-1FBD-6AB3-30A9-34C94F13667F}|Assembly-CSharp.csproj|solutionrelative:assets\\editor scripts\\monstereditor.uxml||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{27A65D5C-1FBD-6AB3-30A9-34C94F13667F}|Assembly-CSharp.csproj|c:\\users\\mari9\\desktop\\unity projects\\a witches tea party\\a witches tea party\\assets\\editor scripts\\monstereditor.uss||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{27A65D5C-1FBD-6AB3-30A9-34C94F13667F}|Assembly-CSharp.csproj|solutionrelative:assets\\editor scripts\\monstereditor.uss||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{27A65D5C-1FBD-6AB3-30A9-34C94F13667F}|Assembly-CSharp.csproj|C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\assets\\editor scripts\\monstereditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27A65D5C-1FBD-6AB3-30A9-34C94F13667F}|Assembly-CSharp.csproj|solutionrelative:assets\\editor scripts\\monstereditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{27A65D5C-1FBD-6AB3-30A9-34C94F13667F}|Assembly-CSharp.csproj|C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\assets\\scriptableobjects\\monsters\\monsterdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27A65D5C-1FBD-6AB3-30A9-34C94F13667F}|Assembly-CSharp.csproj|solutionrelative:assets\\scriptableobjects\\monsters\\monsterdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{27A65D5C-1FBD-6AB3-30A9-34C94F13667F}|Assembly-CSharp.csproj|c:\\users\\mari9\\desktop\\unity projects\\a witches tea party\\a witches tea party\\assets\\editor scripts\\monstereditor.uss||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{27A65D5C-1FBD-6AB3-30A9-34C94F13667F}|Assembly-CSharp.csproj|solutionrelative:assets\\editor scripts\\monstereditor.uss||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,43 +22,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 201,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MonsterEditor.uss",
               "DocumentMoniker": "C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\Assets\\Editor scripts\\MonsterEditor.uss",
               "RelativeDocumentMoniker": "Assets\\Editor scripts\\MonsterEditor.uss",
               "ToolTip": "C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\Assets\\Editor scripts\\MonsterEditor.uss",
               "RelativeToolTip": "Assets\\Editor scripts\\MonsterEditor.uss",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAABAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACoAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-07-14T17:38:15.224Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MonsterData.cs",
-              "DocumentMoniker": "C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\Assets\\ScriptableObjects\\Monsters\\MonsterData.cs",
-              "RelativeDocumentMoniker": "Assets\\ScriptableObjects\\Monsters\\MonsterData.cs",
-              "ToolTip": "C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\Assets\\ScriptableObjects\\Monsters\\MonsterData.cs",
-              "RelativeToolTip": "Assets\\ScriptableObjects\\Monsters\\MonsterData.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T06:48:33.083Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "MonsterEditor.cs",
               "DocumentMoniker": "C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\Assets\\Editor scripts\\MonsterEditor.cs",
               "RelativeDocumentMoniker": "Assets\\Editor scripts\\MonsterEditor.cs",
               "ToolTip": "C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\Assets\\Editor scripts\\MonsterEditor.cs",
               "RelativeToolTip": "Assets\\Editor scripts\\MonsterEditor.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHUAAAAMAAAA",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAAADAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-14T17:22:24.478Z",
               "EditorCaption": ""
@@ -81,7 +64,7 @@
               "RelativeDocumentMoniker": "Assets\\Editor scripts\\MonsterEditor.uxml",
               "ToolTip": "C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\Assets\\Editor scripts\\MonsterEditor.uxml",
               "RelativeToolTip": "Assets\\Editor scripts\\MonsterEditor.uxml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
               "WhenOpened": "2025-07-14T17:27:32.535Z",
               "EditorCaption": ""
