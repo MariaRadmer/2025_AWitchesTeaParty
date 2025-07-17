@@ -5,6 +5,12 @@
             <ui:Label text="Monster Editor" class="header" style="background-color: rgba(56, 56, 56, 0);" />
             <ui:ListView name="monster-list" class="list-view" />
             <ui:Button name="refresh-button" text="Refresh List" class="button" />
+
+            <ui:VisualElement class="create-monster-container" style="flex-direction: row; align-items: center;">
+                <ui:TextField name="new-monster-name-field" label="Name" />
+                <ui:Button name="create-button" text="Create new monstor" class="button" />
+            </ui:VisualElement>
+            
         </ui:VisualElement>
         <ui:VisualElement class="editor-panel" style="flex-basis: 0; min-width: 40%;">
             <ui:ScrollView name="editor-panel">

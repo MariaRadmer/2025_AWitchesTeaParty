@@ -18,6 +18,7 @@ public class MonsterEditor : EditorWindow
     private FloatField damageField;
     private ObjectField iconField;
     private Image iconPreview;
+    private TextField nameInput;
 
     [MenuItem("Window/UI Toolkit/MonsterEditor")]
     public static void ShowExample()
@@ -46,6 +47,7 @@ public class MonsterEditor : EditorWindow
         damageField = root.Q<FloatField>("damage-field");
         iconField = root.Q<ObjectField>("icon-field");
         iconPreview = root.Q<Image>("icon-preview");
+        nameInput = root.Q<TextField>("new-monster-name-field");
 
         iconField.objectType = typeof(Sprite);
         iconPreview.scaleMode = ScaleMode.ScaleToFit;
@@ -55,6 +57,13 @@ public class MonsterEditor : EditorWindow
         LoadMonsters();
 
         root.Q<Button>("refresh-button").clicked += LoadMonsters;
+
+        var createButton = root.Q<Button>("create-button");
+
+        createButton.clicked += () =>
+        {
+            CreateNewMonster(nameInput.value);
+        };
 
         monsterListView.makeItem = () => new Label();
         monsterListView.bindItem = (element, index) =>
@@ -80,6 +89,34 @@ public class MonsterEditor : EditorWindow
         damageField.SetEnabled(enabled);
         iconField.SetEnabled(enabled);
         iconPreview.SetEnabled(enabled);
+    }
+
+    private void CreateNewMonster(string name)
+    {
+        if (string.IsNullOrWhiteSpace(name))
+        {
+            EditorUtility.DisplayDialog("Invalid Name", "Please enter a valid monster name.", "OK");
+            return;
+        }
+
+        var newMonstor = ScriptableObject.CreateInstance<MonsterData>();
+        string path = "Assets/ScriptableObjects/Monsters";
+        if (!AssetDatabase.IsValidFolder(path))
+        {
+            Debug.Log("Invalid folder path");
+        }
+
+        string assetPath = AssetDatabase.GenerateUniqueAssetPath($"{path}/{name}.asset");
+        AssetDatabase.CreateAsset(newMonstor, assetPath);
+        AssetDatabase.SaveAssets();
+
+        LoadMonsters();
+
+        int index = monsterDataList.IndexOf(newMonstor);
+        if (index >= 0)
+        {
+            monsterListView.SetSelection(index);
+        }
     }
 
     private void LoadMonsters()
@@ -176,7 +213,7 @@ public class MonsterEditor : EditorWindow
         if (selectedMonster._icon != null && selectedMonster._icon.texture != null)
         {
             Texture2D cropped = GetCroppedTextureFromSprite(selectedMonster._icon);
-            iconPreview.style.backgroundImage = new StyleBackground(cropped); // selectedMonster._icon.texture);
+            iconPreview.style.backgroundImage = new StyleBackground(cropped);
         }
         else
         {
@@ -191,7 +228,6 @@ public class MonsterEditor : EditorWindow
         Rect spriteRect = sprite.rect;
         Texture2D sourceTexture = sprite.texture;
 
-        // Create a new texture with the size of the sprite
         Texture2D croppedTexture = new Texture2D((int)spriteRect.width, (int)spriteRect.height);
         croppedTexture.filterMode = sourceTexture.filterMode;
         croppedTexture.wrapMode = TextureWrapMode.Clamp;
