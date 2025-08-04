@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 
 
@@ -18,8 +19,10 @@ public class GrowBlock : MonoBehaviour
 
     public int[] growthStages = new int[] { 1, 2, 3 }; 
     public int currentGrowthStageIndex;
+    public SpriteRenderer spriteRenderer;
+    public Sprite tilled; 
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         if (growthStages.Length >= 1)
@@ -27,21 +30,15 @@ public class GrowBlock : MonoBehaviour
             currentGrowthStageIndex = 0;
         }
 
-        AdvanceStage(); // plowed
-        AdvanceStage(); // planting
-        AdvanceStage(); // Growing
-        AdvanceStage(); // 1
-        AdvanceStage(); // 2
-        AdvanceStage(); // 3
-        AdvanceStage(); // Ripe
-        AdvanceStage(); // Empty
-        AdvanceStage(); // Plowed
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if(Keyboard.current.eKey.wasPressedThisFrame)
+        {
+            AdvanceStage();
+            Debug.Log("E Pressed");
+        }
     }
 
     public void AdvanceStage()
@@ -49,12 +46,13 @@ public class GrowBlock : MonoBehaviour
         CropStage newGrowthStage = current + 1; 
         switch (current)
         {
+            case CropStage.Empty:
+                current = newGrowthStage;
+                break;
             case CropStage.Growing:
-                //Debug.Log("CropStage.Growing");
                 if (currentGrowthStageIndex != growthStages.Length - 1)
                 {
                     currentGrowthStageIndex++;
-                    //Debug.Log("currentGrowthStageIndex " + currentGrowthStageIndex);
                 }
                 else
                 {
@@ -63,7 +61,6 @@ public class GrowBlock : MonoBehaviour
                
                 break;
             case CropStage.Ripe:
-                //Debug.Log("CropStage.Ripe");
                 current = CropStage.Empty;
                 if (growthStages.Length >= 1)
                 {
@@ -71,11 +68,24 @@ public class GrowBlock : MonoBehaviour
                 }
                 break;
             default:
-                //Debug.Log("current "+ current);
+               
                 current = newGrowthStage;
                 break;
-        }
-       
+        } 
 
+        if(current == CropStage.Empty)
+        {
+            SetSoilSprite(null);
+        } else
+        {
+            SetSoilSprite(tilled);
+        }
+
+    }
+
+
+    public void SetSoilSprite(Sprite sprite)
+    {
+        spriteRenderer.sprite = sprite;
     }
 }
