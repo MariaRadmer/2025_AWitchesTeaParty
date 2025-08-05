@@ -34,11 +34,12 @@ public class GrowBlock : MonoBehaviour
 
     void Update()
     {
+        /*
         if(Keyboard.current.eKey.wasPressedThisFrame)
         {
             AdvanceStage();
             Debug.Log("E Pressed");
-        }
+        }*/
     }
 
     public void AdvanceStage()
@@ -71,21 +72,33 @@ public class GrowBlock : MonoBehaviour
                
                 current = newGrowthStage;
                 break;
-        } 
-
-        if(current == CropStage.Empty)
-        {
-            SetSoilSprite(null);
-        } else
-        {
-            SetSoilSprite(tilled);
         }
+
+        SetSoilSprite();
 
     }
 
 
-    public void SetSoilSprite(Sprite sprite)
+    public void SetSoilSprite()
     {
-        spriteRenderer.sprite = sprite;
+
+        if (current == CropStage.Empty)
+        {
+            spriteRenderer.sprite = null;
+        }
+        else
+        {
+            spriteRenderer.sprite = tilled;
+        }
+        
+    }
+
+    public void PloughSoil()
+    {
+        if(current == CropStage.Empty)
+        {
+            current = CropStage.Plowed;
+            SetSoilSprite();
+        }
     }
 }
