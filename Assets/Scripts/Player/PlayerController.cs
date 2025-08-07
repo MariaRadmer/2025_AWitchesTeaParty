@@ -87,7 +87,23 @@ public class PlayerController : MonoBehaviour
 
         //block.PloughSoil();
 
-
+        if(block != null )
+        {
+            switch(currentTool)
+            {
+                case ToolType.plow:
+                    block.PloughSoil();
+                    break;
+                case ToolType.wateringcan:
+                    break;
+                case ToolType.seeds:
+                    break;
+                case ToolType.basket:
+                    break;
+                default:
+                    break;
+            }
+        }
     }
     
 
