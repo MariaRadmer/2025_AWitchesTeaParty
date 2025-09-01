@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
+        UIController.instance.SwitchTool((int)currentTool);
     }
 
     void Update()
@@ -40,6 +41,8 @@ public class PlayerController : MonoBehaviour
             transform.localScale = Vector3.one;
         }
 
+        bool hasSwitchedTool = false;
+
         if (Keyboard.current.tabKey.wasPressedThisFrame)
         {
             Debug.Log("Pressed tab");
@@ -49,28 +52,37 @@ public class PlayerController : MonoBehaviour
             {
                 currentTool = ToolType.plow;
             }
+            hasSwitchedTool = true;
         }
 
         if (Keyboard.current.digit1Key.wasPressedThisFrame)
         {
             currentTool = ToolType.plow;
+            hasSwitchedTool = true;
         }
 
         if (Keyboard.current.digit2Key.wasPressedThisFrame)
         {
             currentTool = ToolType.wateringcan;
+            hasSwitchedTool = true;
         }
 
         if (Keyboard.current.digit3Key.wasPressedThisFrame)
         {
             currentTool = ToolType.seeds;
+            hasSwitchedTool = true;
         }
 
         if (Keyboard.current.digit4Key.wasPressedThisFrame)
         {
             currentTool = ToolType.basket;
+            hasSwitchedTool = true;
         }
 
+        if (hasSwitchedTool)
+        {
+            UIController.instance.SwitchTool((int) currentTool);
+        }
 
         if (actionInput.action.WasPressedThisFrame())
         {

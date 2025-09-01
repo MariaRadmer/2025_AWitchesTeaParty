@@ -1733,8 +1733,9 @@ GameObject:
   - component: {fileID: 667318523}
   - component: {fileID: 667318522}
   - component: {fileID: 667318521}
+  - component: {fileID: 667318525}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: UI Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1824,6 +1825,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &667318525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667318520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bab23017e2e0ec54ba5b59c07f1f6a3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toolbarActivatorIcons:
+  - {fileID: 1586865350}
+  - {fileID: 776435253}
+  - {fileID: 613416358}
+  - {fileID: 1162286918}
 --- !u!1 &749452690
 GameObject:
   m_ObjectHideFlags: 0
@@ -2172,7 +2190,7 @@ MonoBehaviour:
   cropManager: {fileID: 404652738}
   animator: {fileID: 1030086054}
   moveSpeed: 8
-  currentTool: 1
+  currentTool: 0
 --- !u!70 &1030086050
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
