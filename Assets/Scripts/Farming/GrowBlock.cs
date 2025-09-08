@@ -20,9 +20,10 @@ public class GrowBlock : MonoBehaviour
     public int[] growthStages = new int[] { 1, 2, 3 }; 
     public int currentGrowthStageIndex;
     public SpriteRenderer spriteRenderer;
-    public Sprite tilled; 
+    public Sprite tilled;
 
-
+    public Sprite wateredTile;
+    public bool isWatered = false;
     void Start()
     {
         if (growthStages.Length >= 1)
@@ -88,7 +89,15 @@ public class GrowBlock : MonoBehaviour
         }
         else
         {
-            spriteRenderer.sprite = tilled;
+            if(isWatered)
+            {
+                spriteRenderer.sprite = wateredTile;
+            }
+            else
+            {
+                spriteRenderer.sprite = tilled;
+            }
+            
         }
         
     }
@@ -100,5 +109,11 @@ public class GrowBlock : MonoBehaviour
             current = CropStage.Plowed;
             SetSoilSprite();
         }
+    }
+
+    public void WaterSoil()
+    {
+        isWatered = true;
+        SetSoilSprite();
     }
 }

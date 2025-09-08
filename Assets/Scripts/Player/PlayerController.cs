@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
 
     public float moveSpeed = 5f;
 
-    private Rigidbody2D rigidbody2D;
+    private Rigidbody2D rb2D;
 
     public ToolType currentTool;
 
@@ -22,24 +22,39 @@ public class PlayerController : MonoBehaviour
         basket
     }
 
+    public float toolWaitTime = .5f;
+    private float toolWaitCounter;
+    
+
     void Start()
     {
-        rigidbody2D = GetComponent<Rigidbody2D>();
+        rb2D = GetComponent<Rigidbody2D>();
         UIController.instance.SwitchTool((int)currentTool);
     }
 
     void Update()
     {
-        rigidbody2D.linearVelocity = moveInput.action.ReadValue<Vector2>().normalized * moveSpeed;
 
-        if (rigidbody2D.linearVelocity.x < 0)
+        if(toolWaitCounter > 0)
         {
-            transform.localScale = new Vector3(-1f, 1f, 1f);
-        }
-        else if (rigidbody2D.linearVelocity.x > 0)
+            toolWaitCounter-= Time.deltaTime;
+            rb2D.linearVelocity = Vector2.zero;
+
+        } else
         {
-            transform.localScale = Vector3.one;
+            rb2D.linearVelocity = moveInput.action.ReadValue<Vector2>().normalized * moveSpeed;
+
+            if (rb2D.linearVelocity.x < 0)
+            {
+                transform.localScale = new Vector3(-1f, 1f, 1f);
+            }
+            else if (rb2D.linearVelocity.x > 0)
+            {
+                transform.localScale = Vector3.one;
+            }
         }
+
+
 
         bool hasSwitchedTool = false;
 
@@ -89,7 +104,7 @@ public class PlayerController : MonoBehaviour
             UseTool();
         }
 
-        animator.SetFloat("speed", rigidbody2D.linearVelocity.magnitude);
+        animator.SetFloat("speed", rb2D.linearVelocity.magnitude);
     }
 
     private void UseTool()
@@ -97,7 +112,7 @@ public class PlayerController : MonoBehaviour
         GrowBlock block = null;
         block = FindFirstObjectByType<GrowBlock>();
 
-        //block.PloughSoil();
+        toolWaitCounter = toolWaitTime;
 
         if(block != null )
         {
@@ -105,8 +120,11 @@ public class PlayerController : MonoBehaviour
             {
                 case ToolType.plow:
                     block.PloughSoil();
+                    animator.SetTrigger("usePlough");
                     break;
                 case ToolType.wateringcan:
+                    animator.SetTrigger("useWateringcan");
+                    block.WaterSoil();
                     break;
                 case ToolType.seeds:
                     break;
