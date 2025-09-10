@@ -127,8 +127,10 @@ public class PlayerController : MonoBehaviour
                     block.WaterSoil();
                     break;
                 case ToolType.seeds:
+                    block.PlantCrop();
                     break;
                 case ToolType.basket:
+                    block.HarvestCrop();
                     break;
                 default:
                     break;

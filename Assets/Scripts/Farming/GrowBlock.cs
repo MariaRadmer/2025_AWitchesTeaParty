@@ -7,29 +7,38 @@ using UnityEngine.InputSystem;
 public class GrowBlock : MonoBehaviour
 {
 
-    public enum CropStage{
+    public enum GrowthStage{
         Empty,
         Plowed,
         Planted,
-        Growing,
+        Growing1,
+        Growing2,
         Ripe
     }
 
-    public CropStage current;
+    public GrowthStage currentStage;
 
-    public int[] growthStages = new int[] { 1, 2, 3 }; 
-    public int currentGrowthStageIndex;
+    //public int[] growthStages = new int[] { 1, 2, 3 }; 
+    //public int currentGrowthStageIndex;
+
     public SpriteRenderer spriteRenderer;
     public Sprite tilled;
 
+    public SpriteRenderer cropSprite;
+    public Sprite cropPlanted, cropGrowing1, cropGrowing2, cropRipe;
+
     public Sprite wateredTile;
     public bool isWatered = false;
+
+    
     void Start()
     {
+        /*
         if (growthStages.Length >= 1)
         {
             currentGrowthStageIndex = 0;
-        }
+        }*/
+
 
     }
 
@@ -41,37 +50,49 @@ public class GrowBlock : MonoBehaviour
             AdvanceStage();
             Debug.Log("E Pressed");
         }*/
+
+#if UNITY_EDITOR
+        if (Keyboard.current.nKey.wasPressedThisFrame)
+        {
+            AdvanceCrop();
+        }
+#endif
     }
 
     public void AdvanceStage()
     {
-        CropStage newGrowthStage = current + 1; 
-        switch (current)
+        GrowthStage newGrowthStage = currentStage + 1; 
+        switch (currentStage)
         {
-            case CropStage.Empty:
-                current = newGrowthStage;
+            case GrowthStage.Empty:
+                currentStage = newGrowthStage;
                 break;
-            case CropStage.Growing:
+            case GrowthStage.Growing1:
+
+                currentStage = newGrowthStage;
+
+                /*
                 if (currentGrowthStageIndex != growthStages.Length - 1)
                 {
                     currentGrowthStageIndex++;
                 }
                 else
                 {
-                    current = newGrowthStage;
-                }
+                   
+                }*/
                
                 break;
-            case CropStage.Ripe:
-                current = CropStage.Empty;
+            case GrowthStage.Ripe:
+                currentStage = GrowthStage.Empty;
+                /*
                 if (growthStages.Length >= 1)
                 {
                     currentGrowthStageIndex = 0;
-                }
+                }*/
                 break;
             default:
                
-                current = newGrowthStage;
+                currentStage = newGrowthStage;
                 break;
         }
 
@@ -83,7 +104,7 @@ public class GrowBlock : MonoBehaviour
     public void SetSoilSprite()
     {
 
-        if (current == CropStage.Empty)
+        if (currentStage == GrowthStage.Empty)
         {
             spriteRenderer.sprite = null;
         }
@@ -104,9 +125,9 @@ public class GrowBlock : MonoBehaviour
 
     public void PloughSoil()
     {
-        if(current == CropStage.Empty)
+        if(currentStage == GrowthStage.Empty)
         {
-            current = CropStage.Plowed;
+            currentStage = GrowthStage.Plowed;
             SetSoilSprite();
         }
     }
@@ -115,5 +136,62 @@ public class GrowBlock : MonoBehaviour
     {
         isWatered = true;
         SetSoilSprite();
+    }
+
+    public void PlantCrop()
+    {
+        if(currentStage  == GrowthStage.Plowed && isWatered)
+        {
+            currentStage = GrowthStage.Planted;
+        }
+        UpdateCropSprite();
+    }
+
+    void UpdateCropSprite()
+    {
+        switch(currentStage)
+        {
+            case GrowthStage.Planted:
+                
+                cropSprite.sprite = cropPlanted;
+                break;
+
+            case GrowthStage.Growing1:
+                cropSprite.sprite = cropGrowing1;
+                break;
+            case GrowthStage.Growing2:
+                cropSprite.sprite = cropGrowing2;
+                break;
+
+            case GrowthStage.Ripe:
+                cropSprite.sprite = cropRipe;
+                break;
+        }
+    }
+
+
+    public void AdvanceCrop()
+    {
+        if(isWatered)
+        {
+            if(currentStage == GrowthStage.Planted ||  currentStage == GrowthStage.Growing1 || currentStage == GrowthStage.Growing2)
+            {
+                currentStage++;
+
+                isWatered = false;
+                SetSoilSprite();
+                UpdateCropSprite();
+            }
+        }
+    }
+
+    public void HarvestCrop()
+    {
+        if (currentStage == GrowthStage.Ripe)
+        {
+            currentStage = GrowthStage.Plowed;
+            SetSoilSprite();
+            cropSprite.sprite = null;
+        }
     }
 }
