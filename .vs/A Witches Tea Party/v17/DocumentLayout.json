@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{27A65D5C-1FBD-6AB3-30A9-34C94F13667F}|Assembly-CSharp.csproj|c:\\users\\mari9\\desktop\\unity projects\\a witches tea party\\a witches tea party\\assets\\scripts\\farming\\gridcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27A65D5C-1FBD-6AB3-30A9-34C94F13667F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\farming\\gridcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{27A65D5C-1FBD-6AB3-30A9-34C94F13667F}|Assembly-CSharp.csproj|C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\assets\\scripts\\farming\\growblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27A65D5C-1FBD-6AB3-30A9-34C94F13667F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\farming\\growblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27A65D5C-1FBD-6AB3-30A9-34C94F13667F}|Assembly-CSharp.csproj|c:\\users\\mari9\\desktop\\unity projects\\a witches tea party\\a witches tea party\\assets\\scripts\\farming\\gridcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27A65D5C-1FBD-6AB3-30A9-34C94F13667F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\farming\\gridcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{27A65D5C-1FBD-6AB3-30A9-34C94F13667F}|Assembly-CSharp.csproj|C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\assets\\scripts\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,32 +26,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 201,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "GridController.cs",
               "DocumentMoniker": "C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\Assets\\Scripts\\Farming\\GridController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Farming\\GridController.cs",
               "ToolTip": "C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\Assets\\Scripts\\Farming\\GridController.cs",
               "RelativeToolTip": "Assets\\Scripts\\Farming\\GridController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAARAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAAewDMAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-10T07:37:24.303Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "GrowBlock.cs",
               "DocumentMoniker": "C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\Assets\\Scripts\\Farming\\GrowBlock.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Farming\\GrowBlock.cs",
               "ToolTip": "C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\Assets\\Scripts\\Farming\\GrowBlock.cs",
               "RelativeToolTip": "Assets\\Scripts\\Farming\\GrowBlock.cs",
-              "ViewState": "AQIAAJwAAAAAAAAAAAAAAK0AAAAFAAAA",
+              "ViewState": "AQIAAK0AAAAAAAAAAAAAAMwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-04T12:19:30.354Z"
+              "WhenOpened": "2025-08-04T12:19:30.354Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

@@ -30,6 +30,8 @@ public class GrowBlock : MonoBehaviour
     public Sprite wateredTile;
     public bool isWatered = false;
 
+    public bool preventUse = false;
+
     
     void Start()
     {
@@ -125,6 +127,7 @@ public class GrowBlock : MonoBehaviour
 
     public void PloughSoil()
     {
+        if (preventUse) return; 
         if(currentStage == GrowthStage.Empty)
         {
             currentStage = GrowthStage.Plowed;
@@ -134,13 +137,15 @@ public class GrowBlock : MonoBehaviour
 
     public void WaterSoil()
     {
+        if (preventUse) return;
         isWatered = true;
         SetSoilSprite();
     }
 
     public void PlantCrop()
     {
-        if(currentStage  == GrowthStage.Plowed && isWatered)
+        if (preventUse) return;
+        if (currentStage  == GrowthStage.Plowed && isWatered)
         {
             currentStage = GrowthStage.Planted;
         }
@@ -149,7 +154,7 @@ public class GrowBlock : MonoBehaviour
 
     void UpdateCropSprite()
     {
-        switch(currentStage)
+        switch (currentStage)
         {
             case GrowthStage.Planted:
                 
@@ -172,7 +177,8 @@ public class GrowBlock : MonoBehaviour
 
     public void AdvanceCrop()
     {
-        if(isWatered)
+        if (preventUse) return;
+        if (isWatered)
         {
             if(currentStage == GrowthStage.Planted ||  currentStage == GrowthStage.Growing1 || currentStage == GrowthStage.Growing2)
             {
@@ -187,6 +193,7 @@ public class GrowBlock : MonoBehaviour
 
     public void HarvestCrop()
     {
+        if (preventUse) return;
         if (currentStage == GrowthStage.Ripe)
         {
             currentStage = GrowthStage.Plowed;
