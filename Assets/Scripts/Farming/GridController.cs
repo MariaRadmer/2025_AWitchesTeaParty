@@ -3,13 +3,20 @@ using UnityEngine;
 
 public class GridController : MonoBehaviour
 {
+    public static GridController instance;
+
     public Transform minPoint,maxPoint;
     public GrowBlock baseGridBlock;
     public List<BlockRow> blockRows = new List<BlockRow>();
 
     public LayerMask gridBlockers;
 
-    private Vector2Int gridSize; 
+    private Vector2Int gridSize;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {
@@ -43,6 +50,7 @@ public class GridController : MonoBehaviour
             {
                 GrowBlock growBlock = Instantiate(baseGridBlock, startpoint + new Vector3(x, y, 0f), Quaternion.identity);
                 growBlock.transform.SetParent(transform);
+                //growBlock.spriteRenderer.sprite = null;
                 currentRow.blocks.Add(growBlock);
                
 
@@ -50,13 +58,29 @@ public class GridController : MonoBehaviour
                 {
                     growBlock.spriteRenderer.sprite = null;
                     growBlock.preventUse = true;
-                    currentRow.blocks.Remove(growBlock);
+                    
                 }
             }
             
         }
 
         baseGridBlock.gameObject.SetActive(false);
+    }
+
+    public GrowBlock GetBlock(float x , float y)
+    {
+        int intX = Mathf.FloorToInt(x - minPoint.position.x);
+        int intY = Mathf.FloorToInt(y - minPoint.position.y);
+
+        if (intX < gridSize.x && intY < gridSize.y)
+        {
+            Debug.Log($"Click at world pos ({x}, {y}) -> grid ({intX}, {intY})");
+            return blockRows[intY].blocks[intX];
+        }
+
+        
+
+        return null;
     }
 }
 

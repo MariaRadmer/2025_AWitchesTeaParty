@@ -24,7 +24,9 @@ public class PlayerController : MonoBehaviour
 
     public float toolWaitTime = .5f;
     private float toolWaitCounter;
-    
+
+    public Transform toolIndicator;
+    public float toolRange = 3.0f;
 
     void Start()
     {
@@ -105,13 +107,24 @@ public class PlayerController : MonoBehaviour
         }
 
         animator.SetFloat("speed", rb2D.linearVelocity.magnitude);
+
+        toolIndicator.position = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        toolIndicator.position = new Vector3(toolIndicator.position.x, toolIndicator.position.y, 0.0f);
+        
+        if(Vector3.Distance(toolIndicator.position, transform.position) > toolRange)
+        {
+            Vector2 diraction = toolIndicator.position - transform.position;
+            diraction = diraction.normalized * toolRange;
+            toolIndicator.position = transform.position + new Vector3(diraction.x,diraction.y,0f);
+        }
+
+        toolIndicator.position = new Vector3(Mathf.FloorToInt(toolIndicator.position.x) + 0.5f, Mathf.FloorToInt(toolIndicator.position.y) + 0.5f, 0f);
     }
 
     private void UseTool()
     {
-        GrowBlock block = null;
-        block = FindFirstObjectByType<GrowBlock>();
-
+       
+        GrowBlock block = GridController.instance.GetBlock(toolIndicator.position.x - .5f, toolIndicator.position.y - .5f);
         toolWaitCounter = toolWaitTime;
 
         if(block != null )
