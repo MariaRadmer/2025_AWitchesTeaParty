@@ -50,7 +50,7 @@ public class GridController : MonoBehaviour
             {
                 GrowBlock growBlock = Instantiate(baseGridBlock, startpoint + new Vector3(x, y, 0f), Quaternion.identity);
                 growBlock.transform.SetParent(transform);
-                //growBlock.spriteRenderer.sprite = null;
+                growBlock.spriteRenderer.sprite = null;
                 currentRow.blocks.Add(growBlock);
                
 
