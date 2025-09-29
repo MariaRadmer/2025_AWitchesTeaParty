@@ -4,6 +4,8 @@ using UnityEngine.Tilemaps;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
+
     public InputActionReference moveInput, actionInput;
     public CropManager cropManager;
     public Animator animator;
@@ -27,6 +29,13 @@ public class PlayerController : MonoBehaviour
 
     public Transform toolIndicator;
     public float toolRange = 3.0f;
+
+
+    private void Awake()
+    {
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
 
     void Start()
     {
