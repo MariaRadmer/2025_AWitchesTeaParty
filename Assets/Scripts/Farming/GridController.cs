@@ -64,6 +64,11 @@ public class GridController : MonoBehaviour
             
         }
 
+        if (!GridInfo.instance.hasGrid)
+        {
+            GridInfo.instance.CreateGrid();
+        }
+
         baseGridBlock.gameObject.SetActive(false);
     }
 

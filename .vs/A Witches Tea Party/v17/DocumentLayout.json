@@ -3,32 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{27A65D5C-1FBD-6AB3-30A9-34C94F13667F}|Assembly-CSharp.csproj|C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\assets\\scripts\\areaswitcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27A65D5C-1FBD-6AB3-30A9-34C94F13667F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\areaswitcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{27A65D5C-1FBD-6AB3-30A9-34C94F13667F}|Assembly-CSharp.csproj|c:\\users\\mari9\\desktop\\unity projects\\a witches tea party\\a witches tea party\\assets\\scripts\\farming\\gridinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27A65D5C-1FBD-6AB3-30A9-34C94F13667F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\farming\\gridinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{27A65D5C-1FBD-6AB3-30A9-34C94F13667F}|Assembly-CSharp.csproj|c:\\users\\mari9\\desktop\\unity projects\\a witches tea party\\a witches tea party\\assets\\scripts\\cameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27A65D5C-1FBD-6AB3-30A9-34C94F13667F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27A65D5C-1FBD-6AB3-30A9-34C94F13667F}|Assembly-CSharp.csproj|C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\assets\\scripts\\player\\uicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27A65D5C-1FBD-6AB3-30A9-34C94F13667F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\uicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27A65D5C-1FBD-6AB3-30A9-34C94F13667F}|Assembly-CSharp.csproj|C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\assets\\scripts\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27A65D5C-1FBD-6AB3-30A9-34C94F13667F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\mari9\\desktop\\unity projects\\a witches tea party\\a witches tea party\\assets\\scripts\\areaswitcher1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\areaswitcher1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27A65D5C-1FBD-6AB3-30A9-34C94F13667F}|Assembly-CSharp.csproj|C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\assets\\scripts\\farming\\gridcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{27A65D5C-1FBD-6AB3-30A9-34C94F13667F}|Assembly-CSharp.csproj|c:\\users\\mari9\\desktop\\unity projects\\a witches tea party\\a witches tea party\\assets\\scripts\\farming\\gridcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27A65D5C-1FBD-6AB3-30A9-34C94F13667F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\farming\\gridcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27A65D5C-1FBD-6AB3-30A9-34C94F13667F}|Assembly-CSharp.csproj|C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\assets\\scriptableobjects\\monsters\\monsterdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27A65D5C-1FBD-6AB3-30A9-34C94F13667F}|Assembly-CSharp.csproj|solutionrelative:assets\\scriptableobjects\\monsters\\monsterdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,93 +18,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 201,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CameraController.cs",
-              "DocumentMoniker": "C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\Assets\\Scripts\\CameraController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CameraController.cs",
-              "ToolTip": "C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\Assets\\Scripts\\CameraController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\CameraController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T07:09:15.91Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PlayerController.cs",
-              "DocumentMoniker": "C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\Assets\\Scripts\\Player\\PlayerController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerController.cs",
-              "ToolTip": "C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\Assets\\Scripts\\Player\\PlayerController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerController.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAABMAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T08:03:37.766Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AreaSwitcher.cs",
-              "DocumentMoniker": "C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\Assets\\Scripts\\AreaSwitcher.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\AreaSwitcher.cs",
-              "ToolTip": "C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\Assets\\Scripts\\AreaSwitcher.cs",
-              "RelativeToolTip": "Assets\\Scripts\\AreaSwitcher.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-23T07:42:00.738Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AreaSwitcher1.cs",
-              "DocumentMoniker": "C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\Assets\\Scripts\\AreaSwitcher1.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\AreaSwitcher1.cs",
-              "ToolTip": "C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\Assets\\Scripts\\AreaSwitcher1.cs",
-              "RelativeToolTip": "Assets\\Scripts\\AreaSwitcher1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T11:29:22.9Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "GridController.cs",
               "DocumentMoniker": "C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\Assets\\Scripts\\Farming\\GridController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Farming\\GridController.cs",
               "ToolTip": "C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\Assets\\Scripts\\Farming\\GridController.cs",
               "RelativeToolTip": "Assets\\Scripts\\Farming\\GridController.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAIBQwCwAAAAqAAAA",
+              "ViewState": "AQIAABoAAAAAAAAAAAAAAC4AAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-10T07:37:24.303Z"
+              "WhenOpened": "2025-10-01T07:44:04.802Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UIController.cs",
-              "DocumentMoniker": "C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\Assets\\Scripts\\Player\\UIController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\UIController.cs",
-              "ToolTip": "C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\Assets\\Scripts\\Player\\UIController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Player\\UIController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAgAAAA",
+              "DocumentIndex": 0,
+              "Title": "GridInfo.cs",
+              "DocumentMoniker": "C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\Assets\\Scripts\\Farming\\GridInfo.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Farming\\GridInfo.cs",
+              "ToolTip": "C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\Assets\\Scripts\\Farming\\GridInfo.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Farming\\GridInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T08:16:20.564Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MonsterData.cs",
-              "DocumentMoniker": "C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\Assets\\ScriptableObjects\\Monsters\\MonsterData.cs",
-              "RelativeDocumentMoniker": "Assets\\ScriptableObjects\\Monsters\\MonsterData.cs",
-              "ToolTip": "C:\\Users\\mari9\\Desktop\\Unity projects\\A Witches Tea Party\\A Witches Tea Party\\Assets\\ScriptableObjects\\Monsters\\MonsterData.cs",
-              "RelativeToolTip": "Assets\\ScriptableObjects\\Monsters\\MonsterData.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T07:01:10.048Z"
+              "WhenOpened": "2025-10-01T07:35:15.53Z",
+              "EditorCaption": ""
             }
           ]
         }
