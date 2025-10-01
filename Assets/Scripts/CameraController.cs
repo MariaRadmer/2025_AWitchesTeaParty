@@ -8,10 +8,10 @@ public class CameraController : MonoBehaviour
     private Camera camera;
     private float halfWidth, halfHeight;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        target = FindAnyObjectByType<PlayerController>().transform;
+        
+        target = PlayerController.instance.transform;
         clampMin.SetParent(null);
         clampMax.SetParent(null);
 
